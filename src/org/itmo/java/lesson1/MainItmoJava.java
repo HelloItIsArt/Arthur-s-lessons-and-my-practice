@@ -98,5 +98,20 @@ public class MainItmoJava {
 
         System.out.println("Itmo branch");
 
+
+
+    }
+
+
+    public static String switcher(Integer number) {
+
+        switch (number) {
+            case 10 :
+                return "ten";
+            case  20 :
+                return "twenty";
+            default:
+                return "Illegal number";
+        }
     }
 }
