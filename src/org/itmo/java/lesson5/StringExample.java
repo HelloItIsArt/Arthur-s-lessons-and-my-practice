@@ -95,6 +95,7 @@ public class StringExample {
         String s = "Мне бяка по-настоящему нравиться больше чего-либо в разработке ПО делать фреймворки, Бяка позволяющие другим разработчикам создавать что-то крутое. БЯКА Иногда, в погоне за идеальным кодом, ко мне на ум приходят странные идеи, но бякАпри реализации который C# может дойти до предела своих возможностей.\n" +
                 "Не так давно произошёл подобный случай, когда БЯКА и мы вместе с коллегой искали способ избежать передачи большого количества типовых параметров в тех местах, где компилятор должен был по идее их вывести. Однако бяКа , C# так устроен, что способен выводить типы в обобщённых вызовах только из передаваемых параметров метода.";
 
+        System.out.println(s);
         System.out.println(replaceWord(s, "бяка"));
     }
 
@@ -107,7 +108,8 @@ public class StringExample {
                 builder.append(str);
 
             } else if (s.toLowerCase().contains(word.toLowerCase())) {
-                String s1 = s.replaceAll(s, str);
+                String substring = s.substring(s.toLowerCase().indexOf(word.toLowerCase()), word.length());
+                String s1 = s.replaceAll(substring, str);
                 builder.append(s1);
 
             } else {
