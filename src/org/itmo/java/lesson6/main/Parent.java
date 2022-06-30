@@ -1,7 +1,11 @@
-package org.itmo.java.lesson6;
+package org.itmo.java.lesson6.main;
 
 public class Parent {
     public String field;
+
+    public Parent(String field) {
+        this.field = field;
+    }
 
     public void print() {
         System.out.println("Method from " + this.getClass().getSimpleName() + " class");
